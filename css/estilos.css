@@ -1,12 +1,54 @@
+/* soft reset do */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
     background-image: url('http://media1.santabanta.com/full1/Nature/Universe/universe-7a.jpg'); 
     background-size: auto 100vh;
     font-family: Arial;
     height: 100vh;
+    font-size: 12px;
   }
+
+/* se a tela tiver no mínimo 400px vai carregar esses estilos */
+@media (min-widht: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-widht: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media (min-widht: 1200px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
   
   .menu {
     background-color: white;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+  }
+
+  .menu a {
+    display: block;
+    padding: 10px 20px;
   }
   
   .menu ul {
@@ -32,7 +74,16 @@ body {
     color: whitesmoke;
     text-align: center;
   }
+
+  .site-title {
+    font-size: 4em;
+  }
   
   .site-subtitle {
     font-style: italic;
+  }
+
+  .img-portfolio {
+    height: 150px;
+    width: 150px;
   }
