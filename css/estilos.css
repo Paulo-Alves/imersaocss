@@ -44,11 +44,18 @@ header {
     position: fixed;
     width: 100vw;
     top: 0;
+    z-index: 1;
   }
 
   .menu a {
     display: block;
     padding: 10px 20px;
+    transition: 2s;
+  }
+
+  .menu a:active, .menu a:hover {
+    background-color: teal;
+    color: white;
   }
   
   .menu ul {
@@ -69,6 +76,23 @@ header {
     text-decoration: underline;
   }
   
+  .titulo {
+    transform: scale(0.2) translatey(50vh);
+    opacity: 0;
+    animation: linear 1.5s animacaoTitulo forwards;
+  }
+
+  @keyframes animacaoTitulo {
+    from {
+      transform: scale(0.2) translatey(50vh);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1) translatey(0);
+      opacity: 1;
+    }
+  }
+
   .site-subtitle,
   .site-title {
     color: whitesmoke;
@@ -86,12 +110,12 @@ header {
     line-height: 1.8em;
   }
 
-  .portfolio {
+  .contato, .portfolio {
     padding: 2em;
-    height: 100vh;
+    min-height: 100vh;
   }
 
-  .portfolio h2 {
+  .contato h2, .portfolio h2 {
     font-family: 'Source Code Pro', monospace;
     color: whitesmoke;
     margin-bottom: 1.5em;
@@ -127,4 +151,24 @@ header {
     width: 240px;
     object-fit: cover;
     object-fit: left bottom;
+    transition: transform 500ms;
+  }
+
+  .img-portfolio:hover {
+    transform: scale(1.2);
+  } 
+
+  .contato .icons {
+    text-align: center;
+  }
+  
+  .contato a {
+    color: whitesmoke;
+    font-size: 4em;
+    transition: text-shadow 1s;
+  }
+
+  .contato a:active, .contato a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 10px rgba(255,255,255,.5);
   }
