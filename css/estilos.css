@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url('http://media1.santabanta.com/full1/Nature/Universe/universe-7a.jpg'); 
+    background-image: url('https://images.pexels.com/photos/2892619/pexels-photo-2892619.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     background-size: auto 100vh;
     font-family: 'Source Code Pro', monospace;
     height: 100vh;
@@ -54,7 +54,7 @@ header {
   }
 
   .menu a:active, .menu a:hover {
-    background-color: teal;
+    background-color: rgb(28, 65, 145);
     color: white;
   }
   
@@ -68,7 +68,7 @@ header {
   }
   
   a {
-    color: teal;
+    color: rgb(28, 65, 145);
     text-decoration: none;
   }
   
@@ -100,7 +100,7 @@ header {
   }
 
   .site-title {
-    font-size: 4em;
+    font-size: 5em;
     font-family: 'Press Start 2P', cursive;
   }
   
@@ -108,18 +108,63 @@ header {
     font-style: italic;
     font-family: 'Source Code Pro', monospace;
     line-height: 1.8em;
+    font-size: 2em;
   }
 
-  .contato, .portfolio {
+  .sobre, 
+  .contato, 
+  .portfolio {
     padding: 2em;
     min-height: 100vh;
   }
 
-  .contato h2, .portfolio h2 {
+  @media (min-width: 1200px) {
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1200px;
+    }
+  }
+
+  .sobre h2, 
+  .contato h2, 
+  .portfolio h2 {
     font-family: 'Source Code Pro', monospace;
     color: whitesmoke;
     margin-bottom: 1.5em;
-    font-size: 2em;
+    margin-top: 0.5em;
+    font-size: 3em;
+  }
+
+  .sobre p {
+    color: whitesmoke;
+    margin-bottom: 1.4;
+    text-indent: 1.4em;
+    text-align: justify;
+    font-size: 18px;
+  }
+
+  .sobre a {
+    color: whitesmoke;
+    text-decoration: underline;
+  }
+  
+  .sobre a:hover {
+    background-color: whitesmoke;
+    text-decoration: none;
+    color: darkblue;
+  }
+
+  .sobre .avatar {
+    margin-left: 2em;
+    clip-path: circle(50% at 50% 50%);
+  }
+
+  @media (min-width: 600px) {
+    .sobre .avatar {
+      clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+      float: right;
+    }
   }
 
   .portfolio .grid {
@@ -148,15 +193,43 @@ header {
 
   .img-portfolio {
     height: 180px;
-    width: 240px;
+    width: 100%;
     object-fit: cover;
     object-fit: left bottom;
     transition: transform 500ms;
   }
 
-  .img-portfolio:hover {
+  /*.img-portfolio:hover {
     transform: scale(1.2);
-  } 
+  } */
+
+  .flip-card {
+    perspective: 500px;
+  }
+  
+  .card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+
+  .flip-card:hover .card {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front, 
+  .card-back {
+    backface-visibility: hidden;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  .card-back {
+    height: 180px;
+    width: 100%;
+    transform: rotateY(180deg);
+  }
 
   .contato .icons {
     text-align: center;

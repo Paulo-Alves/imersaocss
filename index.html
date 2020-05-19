@@ -12,7 +12,7 @@
 <body>
     <header>
         <nav class="menu">
-          <ul>
+          <ul class="container">
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#portfolio">Projetos</a></li>
             <li><a href="#contato">Contato</a></li>
@@ -24,41 +24,91 @@
           <h2 class="site-subtitle">Professor de ciências e biologia</h2>
         </div>
     </header> 
-      <section class="portfolio" id="portfolio">
+    <section class="sobre container" id="sobre">
+      <h2>Sobre</h2>
+      
+      <figure class="avatar">
+        <img src="./img/paulo_alves.jpg" alt="Paulo Alves">
+      </figure>
+     
+      <p>
+        Oi, eu sou o Paulo, biólogo formado pela Universidade Federal da Paraíba. Atualmente professor efetivo de educação básica, ministrando as disciplinas de ciências e biologia.
+      </p>
+      
+      <p>
+        Durante minha graduação trabalhei com o controle biológico de pragas, principalmente com a criação de insetos alimentados com dieta artificial.
+      </p>
+
+      <p>
+        Você pode acompanhar o que produzi durante esse período através do meu currículo na <a href="http://lattes.cnpq.br/4337075369960196">Plataforma Lattes</a>.
+      </p>
+
+      <p>
+        Sempre tive diversos interesses e a tecnologia frequentemente esteve presente, algo que manteve a dúvida sobre ter feito a graduação "correta", embora eu goste muito da biologia, talvez esse seja um pensamento natural de todos.
+      </p>
+
+      <p>
+        Tenho muitos hobbies, que vão desde aprender músicas incompletas na guitarra, e passam por jogos, séries, filmes, podcasts e livros. Estes certamente são o tipo de mídia que mais me influenciam. 
+      </p>
+      
+      <p>
+        Caso tenha curiosidade em saber o que leio, basta  acompanhar meu perfil no <a href="https://www.skoob.com.br/usuario/1073510-paulo-alves">Skoob</a>.
+      </p>
+
+      <p>
+        Este site foi construído durante a <a href="https://www.alura.com.br/imersao-css">Imersão CSS da Alura</a>. 😊
+      </p>
+    </section>
+      <section class="portfolio container" id="portfolio">
         <h2>Projetos</h2>
       <div class="grid">
-        <figure>
-          <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="eCommerce">
-          <figcaption>eCommerce</figcaption>
-        </figure>
+
+        <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="eCommerce">
+              <figcaption>eCommerce</figcaption>
+            </figure>
+            <div class="card-back">
+                eCommerce
+            </div>
+          </div>
+      </div>
+        
         <figure>
           <img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
           <figcaption>Mobile</figcaption>
         </figure>
+
         <figure>
           <img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Web design">
           <figcaption>Web design</figcaption>
         </figure>
+
         <figure>
           <img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg" alt="Projetos pessoais">
           <figcaption>Projetos pessoais</figcaption>
         </figure>
+
         <figure>
           <img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg" alt="Projetos pessoais">
           <figcaption>Projetos pessoais</figcaption>
         </figure>
       </section>
-      <section class="contato" id="contato">
+      <section class="contato container" id="contato">
         <h2>Contato</h2>
         <div class="grid icons">
+          <a target="_blank" href="https://www.linkedin.com/in/paulo-alves-b56293aa/">
+            <i class="fab fa-linkedin"></i>
+          </a>
           <a target="_blank" href="https://github.com/Paulo-Alves">
             <i class="fab fa-github"></i>
           </a>
           <a target="_blank" href="https://twitter.com/paulo_alves91">
             <i class="fab fa-twitter"></i>
           </a>
-          <a target="_blank" href="https://www.linkedin.com/in/paulo-alves-b56293aa/">
-            <i class="fab fa-linkedin"></i>
+          <a target="_blank" href="https://www.instagram.com/pauloalves_91/">
+            <i class="fab fa-instagram"></i>
           </a>
           <a href="mailto:paulogba13@hotmail.com">
             <i class="fas fa-envelope"></i>
